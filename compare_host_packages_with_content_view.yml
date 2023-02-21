@@ -4,15 +4,25 @@
   tasks:
   - name: Copy python scripts to remote machine
     ansible.builtin.copy:
-      src: /runner/project/python_scripts/
-      dest: /tmp/python_scripts
+      src: "{{ playbook_dir }}/python_scripts/"
+      dest: /tmp/outputs
 
   - name: Run Python script
-    command: "python3 /tmp/python_scripts/contentview-query-pckg.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}"
+    ansible.builtin.command: "python3 /tmp/outputs/contentview-query-pckg.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}"
     args:
-      chdir: /tmp/python_scripts
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/contentview-query-pckg.py
+      state: absent
 
   - name: Run Python script
-    command: "python3 /tmp/python_scripts/package-repos.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}"
+    ansible.builtin.command: "python3 /tmp/outputs/package-repos.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}"
     args:
-      chdir: /tmp/python_scripts
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/package-repos.py
+      state: absent
