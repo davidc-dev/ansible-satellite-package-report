@@ -39,7 +39,7 @@ for cvv in content_view_versions:
         break
 
 # # Get a list of all erratas in the selected content view version
-full_version = False
+full_version = sys.argv[6]
 errata_url = f'{url}errata?content_view_version_id={str(my_content_view_version_id)}&full_result={full_version}'
 errata_response = session.get(errata_url, verify=False)
 errata=json.loads(errata_response.content)['results']
