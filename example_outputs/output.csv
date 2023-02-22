@@ -1,0 +1,7 @@
+package_name,applicable_cves,satellite_repo_path,source_repo_path
+libksba-1.3.5-9.el8_7,CVE-2022-47629,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
+sudo-1.8.29-8.el8_7.1,CVE-2023-22809,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
+libxml2-2.9.7-15.el8_7.1,"CVE-2022-40303, CVE-2022-40304",https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
+expat-2.2.5-10.el8_7.1,CVE-2022-43680,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
+libtasn1-4.13-4.el8_7,CVE-2021-46848,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
+systemd-239-68.el8_7.1,CVE-2022-3821,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
