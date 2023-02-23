@@ -1,7 +1,0 @@
-package_name,package_id,satellite_repo_path,source_repo_path
-libksba-1.3.5-9.el8_7,109263,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
-sudo-1.8.29-8.el8_7.1,109135,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
-libxml2-2.9.7-15.el8_7.1,109187,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
-expat-2.2.5-10.el8_7.1,109406,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
-libtasn1-4.13-4.el8_7,109209,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
-systemd-239-68.el8_7.1,109114,https://satellite.example.com/pulp/content/TestOrg/Library/RHEL8/content/dist/rhel8/8/x86_64/baseos/os/,https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os
