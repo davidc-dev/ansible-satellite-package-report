@@ -7,22 +7,62 @@
       src: "{{ playbook_dir }}/files/"
       dest: /tmp/outputs
 
-  - name: Run Python script
-    ansible.builtin.command: "python3 /tmp/outputs/contentview-query-pckg.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }} {{ full_results }}" 
+  - name: Run 1_query_content_view.py 
+    ansible.builtin.command: "python3 /tmp/outputs/1_query_content_view.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }} {{ full_results }}" 
     args:
       chdir: /tmp/outputs
 
   - name: Remove file (delete file)
     ansible.builtin.file:
-      path: /tmp/outputs/contentview-query-pckg.py
+      path: /tmp/outputs/1_query_content_view.py 
       state: absent
 
-  - name: Run Python script
-    ansible.builtin.command: "python3 /tmp/outputs/package-repos.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}"
+  - name: Run 2_packages_errata_id.py
+    ansible.builtin.command: "python3 /tmp/outputs/2_packages_errata_id.py"
     args:
       chdir: /tmp/outputs
 
   - name: Remove file (delete file)
     ansible.builtin.file:
-      path: /tmp/outputs/package-repos.py
+      path: /tmp/outputs/2_packages_errata_id.py
+      state: absent
+
+  - name: Run 3_packages_ids.py
+    ansible.builtin.command: "python3 /tmp/outputs/3_packages_ids.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }}"
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/3_packages_ids.py
+      state: absent
+
+  - name: Run 4_packages_repos.py 
+    ansible.builtin.command: "python3 /tmp/outputs/4_packages_repos.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}" 
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/4_packages_repos.py 
+      state: absent
+
+  - name: Run 5_packages_cve.py
+    ansible.builtin.command: "python3 /tmp/outputs/5_packages_cve.py"
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/5_packages_cve.py
+      state: absent
+
+  - name: Run 6_merge_results.py
+    ansible.builtin.command: "python3 /tmp/outputs/6_merge_results.py"
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/6_merge_results.py
       state: absent
