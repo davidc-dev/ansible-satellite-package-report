@@ -42,7 +42,7 @@ for cvv in content_view_versions:
 
 ## load package id csv
 
-with open('packages_errata_with_package_id.csv', 'r') as f:
+with open('3_packages_errata_id.csv', 'r') as f:
     packages_ids = list(csv.DictReader(f))
 
 output = []
@@ -56,77 +56,26 @@ for row in packages_ids:
             satellite_repo_path = data['results'][0]['full_path']
             source_repo_path = data['results'][0]['url']
             package_name = row['package_name']
+            architecture = row['arch']
             package_id   = row['package_id']
             errata_id = row['errata_id']
+            severity = row['severity']
+            errata_type = row['errata_type']
             row = {
                 "package_name": package_name,
+                "arch": architecture,
                 "package_id": package_id,
                 "errata_id": errata_id,
+                "severity": severity,
+                "errata_type": errata_type,
                 "satellite_repo": satellite_repo_path,
                 "source_repo": source_repo_path
             }
             output.append(row)
 
 # Output the results to a new CSV file with unique package names as the parent
-with open('packages_errata_with_package_id_and_repos.csv', 'w', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=["package_name", "package_id", "errata_id", "satellite_repo", "source_repo"])
+with open('4_packages_errata_id_repos.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=["package_name", "arch", "package_id", "errata_id", "severity", "errata_type", "satellite_repo", "source_repo"])
     writer.writeheader()
     for row in output:
         writer.writerow(row)
-
-# ###
-# with open('package_ids.json', 'r') as f:
-#     package_ids_output = json.load(f)
-
-# # Get package repo id for content view version
-# output = []
-# for key, value in package_ids_output.items():
-#     api_url = f'{satellite_url}/repositories?content_view_version_id={my_content_view_version_id}&environment_id=1&organization_id=1&rpm_id={value}&search='
-#     response = session.get(api_url, verify=False)
-#     if response.status_code == 200:
-#         data = json.loads(response.content)
-#         if data['total'] > 0:
-#             satellite_repo_path = data['results'][0]['full_path']
-#             source_repo_path = data['results'][0]['url']
-#             package_name = key
-#             package_id = value
-#             row = {
-#                 "package_name": package_name,
-#                 "package_id": package_id,
-#                 "satellite_repo_path": satellite_repo_path,
-#                 "source_repo_path": source_repo_path
-#             }
-#             output.append(row)
-
-# # Output the results to a new CSV file with unique package names as the parent
-# with open('package_repos.csv', 'w', newline='') as f:
-#     writer = csv.DictWriter(f, fieldnames=["package_name", "package_id", "satellite_repo_path", "source_repo_path"])
-#     writer.writeheader()
-#     for row in output:
-#         writer.writerow(row)
-
-# # Read package_cves.json file and parse JSON data
-# with open('package_cves.json') as f:
-#     package_cves = json.load(f)
-
-# # Read package_repos.csv file and store data in a dictionary
-# with open('package_repos.csv') as f:
-#     reader = csv.DictReader(f)
-#     package_repos = {row['package_name']: row for row in reader}
-
-# # Create a new list of dictionaries with the desired columns
-# output_data = []
-# for package_name, cves in package_cves.items():
-#     row = {
-#         'package_name': package_name,
-#         'applicable_cves': ', '.join(cves),
-#         'satellite_repo_path': package_repos[package_name]['satellite_repo_path'],
-#         'source_repo_path': package_repos[package_name]['source_repo_path']
-#     }
-#     output_data.append(row)
-
-# # Write output to a new CSV file
-# with open('output.csv', 'w', newline='') as f:
-#     writer = csv.DictWriter(f, fieldnames=['package_name', 'applicable_cves', 'satellite_repo_path', 'source_repo_path'])
-#     writer.writeheader()
-#     writer.writerows(output_data)
