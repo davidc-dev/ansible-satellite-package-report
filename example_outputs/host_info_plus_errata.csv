@@ -1,4 +1,0 @@
-host_id,host_name,operating_system_name,organization_name,errata_status_label,hostgroup_name,lifecycle_environment_name,content_view_name,errata_ids
-host_id,host_name,operating_system_name,organization_name,errata_status_label,hostgroup_name,lifecycle_environment_name,content_view_name,Error fetching errata
-3,dcdev1.dev.home.local,RedHat 9.0,DCDevLab,Security errata applicable,RHEL9-Hosts,Library,RHEL8,
-2,rhel.dev.home.local,RedHat 8.7,DCDevLab,Security errata applicable,RHEL8-Hosts,Library,RHEL8,"RHSA-2023:0625,RHSA-2023:0284,RHSA-2023:0173,RHSA-2023:0103,RHBA-2023:0120,RHBA-2023:0109,RHBA-2023:0097,RHSA-2023:0116,RHBA-2023:0098,RHBA-2023:0111,RHBA-2023:0094,RHSA-2023:0100,RHBA-2023:0090,RHBA-2023:0124,RHBA-2023:0105,RHBA-2023:0085,RHBA-2023:0104,RHSA-2023:0096,RHSA-2023:0110,RHSA-2023:0101"

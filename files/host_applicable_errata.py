@@ -1,7 +1,7 @@
 import requests
-import json
 import sys
 import csv
+import datetime
 
 # Variables from arguments
 satellite_hostname = sys.argv[1]
@@ -24,12 +24,13 @@ output_file = output_filename
 
 # Define the names of the input and output columns
 input_columns = ["host_id", "host_name", "operating_system_name", "organization_name", "errata_status_label", "hostgroup_name", "lifecycle_environment_name", "content_view_name"]
-output_columns = input_columns + ["errata_ids"]
+output_columns = input_columns + ["errata_ids", "script_run_time"]
 
 # Export the input CSV data to a list of dictionaries
 hosts = []
 with open(input_file, "r") as f:
     reader = csv.DictReader(f, fieldnames=input_columns)
+    next(reader)
     for row in reader:
         hosts.append(row)
 
@@ -47,6 +48,12 @@ for host in hosts:
         host["errata_ids"] = ",".join(errata_ids)
     else:
         host["errata_ids"] = "Error fetching errata"
+
+# Add a new column with the current date and time
+current_time = datetime.datetime.now()
+for host in hosts:
+    host["script_run_time"] = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
 
 # Export the updated list of dictionaries to a new CSV file
 with open(output_file, "w", newline="") as f:
