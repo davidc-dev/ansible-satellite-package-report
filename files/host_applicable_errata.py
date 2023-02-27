@@ -1,0 +1,56 @@
+import requests
+import json
+import sys
+import csv
+
+# Variables from arguments
+satellite_hostname = sys.argv[1]
+username = sys.argv[2]
+password = sys.argv[3]
+output_filename = sys.argv[4]
+
+
+# Authenticate with the Satellite API
+auth = (username, password)
+url = f'https://{satellite_hostname}/'
+session = requests.Session()
+session.auth = auth
+
+# Read in the input CSV file
+input_file = 'host_info.csv'
+
+# Create a new CSV file with an added row for CVEs
+output_file = output_filename
+
+# Define the names of the input and output columns
+input_columns = ["host_id", "host_name", "operating_system_name", "organization_name", "errata_status_label", "hostgroup_name", "lifecycle_environment_name", "content_view_name"]
+output_columns = input_columns + ["errata_ids"]
+
+# Export the input CSV data to a list of dictionaries
+hosts = []
+with open(input_file, "r") as f:
+    reader = csv.DictReader(f, fieldnames=input_columns)
+    for row in reader:
+        hosts.append(row)
+
+# Make HTTP requests to the Satellite API for each host and extract errata IDs
+for host in hosts:
+    # Construct the API endpoint URL for the host's errata
+    api_url = f"{url}api/v2/hosts/{host['host_id']}/errata"
+    # Make an HTTP request to the API and authenticate using credentials
+    response = session.get(api_url, verify=False)
+
+#     Parse the response to extract the errata IDs
+    if response.status_code == 200:
+        errata = response.json()
+        errata_ids = [e["errata_id"] for e in errata["results"]]
+        host["errata_ids"] = ",".join(errata_ids)
+    else:
+        host["errata_ids"] = "Error fetching errata"
+
+# Export the updated list of dictionaries to a new CSV file
+with open(output_file, "w", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=output_columns)
+    writer.writeheader()
+    for host in hosts:
+        writer.writerow(host)

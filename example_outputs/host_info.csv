@@ -1,0 +1,3 @@
+host_id,host_name,operating_system_name,organization_name,errata_status_label,hostgroup_name,lifecycle_environment_name,content_view_name
+3,dcdev1.dev.home.local,RedHat 9.0,DCDevLab,Security errata applicable,RHEL9-Hosts,Library,RHEL8
+2,rhel.dev.home.local,RedHat 8.7,DCDevLab,Security errata applicable,RHEL8-Hosts,Library,RHEL8

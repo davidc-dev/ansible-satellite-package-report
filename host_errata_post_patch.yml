@@ -1,0 +1,28 @@
+- name: Compare host packages with content view
+  hosts: "{{ inventory_host }}"
+
+  tasks:
+  - name: Copy python scripts to remote machine
+    ansible.builtin.copy:
+      src: "{{ playbook_dir }}/files/"
+      dest: /tmp/outputs
+
+  - name: host_list.py 
+    ansible.builtin.command: "python3 /tmp/outputs/host_list.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ host_collection }}" 
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/host_list.py 
+      state: absent
+
+  - name: Run host_applicable_errata.py
+    ansible.builtin.command: "python3 /tmp/outputs/host_applicable_errata.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} post-patch-host-errata.csv"
+    args:
+      chdir: /tmp/outputs
+
+  - name: Remove file (delete file)
+    ansible.builtin.file:
+      path: /tmp/outputs/host_applicable_errata.py
+      state: absent
