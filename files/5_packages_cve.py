@@ -1,9 +1,9 @@
 import requests
 import json
-
+import os
 
 # Read the combined JSON file
-with open('combined.json', 'r') as f:
+with open('1_content_view_query_results.json', 'r') as f:
     combined_output = json.load(f)
 
 # Query the Red Hat Security Data API for package information for each CVE in each errata
@@ -24,7 +24,7 @@ for errata_id, data in combined_output.items():
             cve_packages_output[cve] = packages_output
 
 # Output the results to a new JSON file with the CVE ID as the parent
-with open('cve_packages.json', 'w') as f:
+with open('cve_packages_tmp.json', 'w') as f:
     json.dump(cve_packages_output, f)
 
 # Rearrange the data to create a new JSON object with unique package names as the parent
@@ -39,5 +39,7 @@ for cve, packages in cve_packages_output.items():
             package_cves_output[package_name].append(cve)
 
 # Output the results to a new JSON file with unique package names as the parent
-with open('package_cves.json', 'w') as f:
+with open('5_package_cves.json', 'w') as f:
     json.dump(package_cves_output, f)
+
+os.remove("cve_packages_tmp.json")
