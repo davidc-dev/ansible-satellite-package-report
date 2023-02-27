@@ -4,10 +4,10 @@
   tasks:
   - name: Copy python scripts to remote machine
     ansible.builtin.copy:
-      src: "{{ playbook_dir }}"
+      src: "{{ item }}"
       dest: /tmp/outputs
     with_fileglob: 
-      - "/files/host*"
+      - "{{ playbook_dir }}/files/host*"
   
 
   - name: Run host_list.py 
