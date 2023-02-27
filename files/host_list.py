@@ -35,7 +35,7 @@ host_list=json.loads(host_collection_id_response.content)
 
 ## Get all host details 
 
-hosts_url = f'{url}api/hosts'
+hosts_url = f'{url}api/hosts?thin=true'
 hosts_response = session.get(hosts_url, verify=False)
 hosts = json.loads(hosts_response.content)
 
@@ -47,7 +47,7 @@ with open('host_info.csv', 'w', newline='') as f:
     writer = csv.writer(f)
 
     # Write the header row
-    writer.writerow(['host_id', 'host_name', 'operating_system_name', 'organization_name', 'errata_status_label', 'hostgroup_name', 'lifecycle_environment_name', 'content_view_name'])
+    writer.writerow(['host_id', 'host_name'])
 
     # Loop through the host_ids in file2
     for host_id in host_list['host_ids']:
@@ -57,13 +57,7 @@ with open('host_info.csv', 'w', newline='') as f:
                 # Extract the desired fields
                 row = [
                     host['id'],
-                    host['name'],
-                    host['operatingsystem_name'],
-                    host['organization_name'],
-                    host['errata_status_label'],
-                    host['hostgroup_name'],
-                    host['content_facet_attributes']['lifecycle_environment_name'],
-                    host['content_facet_attributes']['content_view_name']
+                    host['name']
                 ]
 
                 # Write the row to the CSV file

@@ -70,12 +70,14 @@ for e in errata:
 combined_output = {}
 for e in errata:
     combined_output[str(e['errata_id'])] = {
+        'severity': str(e['severity']),
+        'errata_type': str(e['type']),
         'CVEs': cves_output.get(str(e['errata_id']), []),
         'bugs': bugs_output.get(str(e['errata_id']), []),
         'packages': packages_output.get(str(e['errata_id']), [])
     }
 
 # Output the results as a single JSON object to a file
-with open('combined.json', 'w') as f:
+with open('1_content_view_query_results.json', 'w') as f:
     json.dump(combined_output, f)
 

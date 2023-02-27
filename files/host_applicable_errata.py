@@ -23,7 +23,7 @@ input_file = 'host_info.csv'
 output_file = output_filename
 
 # Define the names of the input and output columns
-input_columns = ["host_id", "host_name", "operating_system_name", "organization_name", "errata_status_label", "hostgroup_name", "lifecycle_environment_name", "content_view_name"]
+input_columns = ["host_id", "host_name"]
 output_columns = input_columns + ["errata_ids", "script_run_time"]
 
 # Export the input CSV data to a list of dictionaries
@@ -37,7 +37,7 @@ with open(input_file, "r") as f:
 # Make HTTP requests to the Satellite API for each host and extract errata IDs
 for host in hosts:
     # Construct the API endpoint URL for the host's errata
-    api_url = f"{url}api/v2/hosts/{host['host_id']}/errata"
+    api_url = f"{url}api/v2/hosts/{host['host_id']}/errata?full_result=true"
     # Make an HTTP request to the API and authenticate using credentials
     response = session.get(api_url, verify=False)
 

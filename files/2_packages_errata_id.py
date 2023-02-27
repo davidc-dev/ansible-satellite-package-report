@@ -1,6 +1,6 @@
 import json
 
-with open("combined.json", "r") as f:
+with open("1_content_view_query_results.json", "r") as f:
     data = json.load(f)
 
 rows = []
@@ -18,10 +18,13 @@ for errata_id, errata_data in data.items():
             rows.append({
                 'package_name': package,
                 'errata_id': errata_id,
+                'severity': errata_data.get('severity'),
+                'errata_type': errata_data.get('errata_type')
             })
             packages.add(package)
 
-with open('packages_errata.csv', 'w') as f:
-    f.write('package_name,errata_id\n')
+
+with open('2_packages_errata.csv', 'w') as f:
+    f.write('package_name,errata_id,severity,errata_type\n')
     for row in rows:
-        f.write('{},{}\n'.format(row['package_name'], row['errata_id']))
+        f.write('"{0}","{1}","{2}","{3}"\n'.format(row['package_name'], row['errata_id'], row['severity'], row['errata_type']))

@@ -3,7 +3,7 @@ import csv
 import os
 
 # Read in the input CSV file
-input_file = 'packages_errata_with_package_id_and_repos.csv'
+input_file = '4_packages_errata_id_repos.csv'
 input_rows = []
 with open(input_file, 'r') as f:
     reader = csv.reader(f)
@@ -12,7 +12,7 @@ with open(input_file, 'r') as f:
         input_rows.append(row)
 
 # Read in the CVE data from the JSON file
-cve_data_file = 'package_cves.json'
+cve_data_file = '5_package_cves.json'
 with open(cve_data_file, 'r') as f:
     cve_data = json.load(f)
 
@@ -38,7 +38,7 @@ for row in rows:
     cves = row.pop()  # remove the last element (cves)
     row.insert(3, cves)  # insert cves at the 4th position
 
-with open('final_report.csv', 'w', newline='') as csv_file:
+with open('6_final_package_report.csv', 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerows(rows)
 
