@@ -8,7 +8,7 @@
       dest: /tmp/outputs
 
   - name: Run 1_query_content_view.py 
-    ansible.builtin.command: "python3 /tmp/outputs/1_query_content_view.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }} {{ full_results }}" 
+    ansible.builtin.command: "python3 /tmp/outputs/1_query_content_view.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }} {{ full_results }} {{ content_view_filter_name }}" 
     args:
       chdir: /tmp/outputs
 

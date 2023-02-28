@@ -14,6 +14,7 @@ satellite_pswd  |  password               |  Satellite Server password
 content_view    |  RHEL8                    |  Name of Content View to run against
 content_view_version|   6.0              |  Version of Content View to run against
 full_results    |  True/False            |  Set to True to get full resuts from content view query.  **Warning** Will increase run time dramatically.
+content_view_filter_name | security_only | Set name of Content view filter to use.  Leave blank ```content_view_filter_name: ""``` if no filter used.
 
 ## **host_errata_pre_patch.yml**
 
