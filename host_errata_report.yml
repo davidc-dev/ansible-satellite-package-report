@@ -33,5 +33,4 @@
     ansible.builtin.file:
       src: "{{ item }}"
       state: absent
-    with_fileglob: 
-      - "/tmp/outputs/*.py
+    with_fileglob: /tmp/outputs/*.py
