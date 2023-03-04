@@ -17,7 +17,7 @@ session = requests.Session()
 session.auth = auth
 
 # Read in the input CSV file
-input_file = 'host_info.csv'
+input_file = 'host_list.csv'
 
 # Create a new CSV file with an added row for CVEs
 output_file = output_filename
