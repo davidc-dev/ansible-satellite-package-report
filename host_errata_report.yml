@@ -13,7 +13,7 @@
       - "{{ playbook_dir }}/files/host*"
 
   - name: Run host_list_host_collection.py when host_collection_name varaible is length greater than 0.
-    ansible.builtin.command: "python3 /tmp/outputs/host_list.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ host_collection }}" 
+    ansible.builtin.command: "python3 /tmp/outputs/host_list_host_collection.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ host_collection }}" 
     args:
       chdir: /tmp/outputs
     when: host_collection | length > 0
