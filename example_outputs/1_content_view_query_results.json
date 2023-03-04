@@ -1,1 +1,380 @@
-{"RHBA-2023:0658": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": [], "packages": ["kmod-redhat-oracleasm-2.0.8-15.1.el8_7.x86_64", "kmod-redhat-oracleasm-kernel_4_18_0_425_10_1-2.0.8-15.1.el8_7.x86_64", "kmod-redhat-oracleasm-kernel_4_18_0_425_3_1-2.0.8-15.1.el8_7.x86_64"]}, "RHSA-2023:0625": {"severity": "Important", "errata_type": "security", "CVEs": ["CVE-2022-47629"], "bugs": ["2161571"], "packages": ["libksba-1.3.5-9.el8_7.i686", "libksba-1.3.5-9.el8_7.x86_64"]}, "RHSA-2023:0284": {"severity": "Important", "errata_type": "security", "CVEs": ["CVE-2023-22809"], "bugs": ["2161142"], "packages": ["sudo-1.8.29-8.el8_7.1.x86_64"]}, "RHSA-2023:0173": {"severity": "Moderate", "errata_type": "security", "CVEs": ["CVE-2022-40303", "CVE-2022-40304"], "bugs": ["2136266", "2136288"], "packages": ["libxml2-2.9.7-15.el8_7.1.i686", "libxml2-2.9.7-15.el8_7.1.x86_64", "libxml2-devel-2.9.7-15.el8_7.1.i686", "libxml2-devel-2.9.7-15.el8_7.1.x86_64", "python3-libxml2-2.9.7-15.el8_7.1.x86_64"]}, "RHSA-2023:0103": {"severity": "Moderate", "errata_type": "security", "CVEs": ["CVE-2022-43680"], "bugs": ["2140059"], "packages": ["expat-2.2.5-10.el8_7.1.i686", "expat-2.2.5-10.el8_7.1.x86_64", "expat-devel-2.2.5-10.el8_7.1.i686", "expat-devel-2.2.5-10.el8_7.1.x86_64"]}, "RHBA-2023:0120": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2151229"], "packages": ["authselect-1.2.5-2.el8_7.x86_64", "authselect-compat-1.2.5-2.el8_7.x86_64", "authselect-libs-1.2.5-2.el8_7.i686", "authselect-libs-1.2.5-2.el8_7.x86_64"]}, "RHBA-2023:0107": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": [], "packages": ["dhcp-client-4.3.6-48.el8_7.1.x86_64", "dhcp-common-4.3.6-48.el8_7.1.noarch", "dhcp-libs-4.3.6-48.el8_7.1.i686", "dhcp-libs-4.3.6-48.el8_7.1.x86_64", "dhcp-relay-4.3.6-48.el8_7.1.x86_64", "dhcp-server-4.3.6-48.el8_7.1.x86_64"]}, "RHBA-2023:0109": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": [], "packages": ["systemd-239-68.el8_7.2.i686", "systemd-239-68.el8_7.2.x86_64", "systemd-container-239-68.el8_7.2.i686", "systemd-container-239-68.el8_7.2.x86_64", "systemd-devel-239-68.el8_7.2.i686", "systemd-devel-239-68.el8_7.2.x86_64", "systemd-journal-remote-239-68.el8_7.2.x86_64", "systemd-libs-239-68.el8_7.2.i686", "systemd-libs-239-68.el8_7.2.x86_64", "systemd-pam-239-68.el8_7.2.x86_64", "systemd-tests-239-68.el8_7.2.x86_64", "systemd-udev-239-68.el8_7.2.x86_64"]}, "RHBA-2023:0086": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": [], "packages": ["opencryptoki-3.18.0-5.el8_7.x86_64", "opencryptoki-icsftok-3.18.0-5.el8_7.x86_64", "opencryptoki-libs-3.18.0-5.el8_7.i686", "opencryptoki-libs-3.18.0-5.el8_7.x86_64", "opencryptoki-swtok-3.18.0-5.el8_7.x86_64", "opencryptoki-tpmtok-3.18.0-5.el8_7.x86_64"]}, "RHBA-2023:0097": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2136762"], "packages": ["selinux-policy-3.14.3-108.el8_7.1.noarch", "selinux-policy-devel-3.14.3-108.el8_7.1.noarch", "selinux-policy-doc-3.14.3-108.el8_7.1.noarch", "selinux-policy-minimum-3.14.3-108.el8_7.1.noarch", "selinux-policy-mls-3.14.3-108.el8_7.1.noarch", "selinux-policy-sandbox-3.14.3-108.el8_7.1.noarch", "selinux-policy-targeted-3.14.3-108.el8_7.1.noarch"]}, "RHSA-2023:0116": {"severity": "Moderate", "errata_type": "security", "CVEs": ["CVE-2021-46848"], "bugs": ["2140058"], "packages": ["libtasn1-4.13-4.el8_7.i686", "libtasn1-4.13-4.el8_7.x86_64", "libtasn1-devel-4.13-4.el8_7.i686", "libtasn1-devel-4.13-4.el8_7.x86_64", "libtasn1-tools-4.13-4.el8_7.x86_64"]}, "RHBA-2023:0098": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2132281", "2135733", "2152891", "2153429"], "packages": ["NetworkManager-1.40.0-5.el8_7.x86_64", "NetworkManager-adsl-1.40.0-5.el8_7.x86_64", "NetworkManager-bluetooth-1.40.0-5.el8_7.x86_64", "NetworkManager-cloud-setup-1.40.0-5.el8_7.x86_64", "NetworkManager-config-connectivity-redhat-1.40.0-5.el8_7.noarch", "NetworkManager-config-server-1.40.0-5.el8_7.noarch", "NetworkManager-dispatcher-routing-rules-1.40.0-5.el8_7.noarch", "NetworkManager-initscripts-updown-1.40.0-5.el8_7.noarch", "NetworkManager-libnm-1.40.0-5.el8_7.i686", "NetworkManager-libnm-1.40.0-5.el8_7.x86_64", "NetworkManager-ovs-1.40.0-5.el8_7.x86_64", "NetworkManager-ppp-1.40.0-5.el8_7.x86_64", "NetworkManager-team-1.40.0-5.el8_7.x86_64", "NetworkManager-tui-1.40.0-5.el8_7.x86_64", "NetworkManager-wifi-1.40.0-5.el8_7.x86_64", "NetworkManager-wwan-1.40.0-5.el8_7.x86_64"]}, "RHBA-2023:0111": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2144493"], "packages": ["curl-7.61.1-25.el8_7.1.x86_64", "libcurl-7.61.1-25.el8_7.1.i686", "libcurl-7.61.1-25.el8_7.1.x86_64", "libcurl-devel-7.61.1-25.el8_7.1.i686", "libcurl-devel-7.61.1-25.el8_7.1.x86_64", "libcurl-minimal-7.61.1-25.el8_7.1.i686", "libcurl-minimal-7.61.1-25.el8_7.1.x86_64"]}, "RHBA-2023:0094": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2139118"], "packages": ["rsync-3.1.3-19.el8_7.1.x86_64", "rsync-daemon-3.1.3-19.el8_7.1.noarch"]}, "RHSA-2023:0100": {"severity": "Moderate", "errata_type": "security", "CVEs": ["CVE-2022-3821"], "bugs": ["2127170", "2139327"], "packages": ["systemd-239-68.el8_7.1.i686", "systemd-239-68.el8_7.1.x86_64", "systemd-container-239-68.el8_7.1.i686", "systemd-container-239-68.el8_7.1.x86_64", "systemd-devel-239-68.el8_7.1.i686", "systemd-devel-239-68.el8_7.1.x86_64", "systemd-journal-remote-239-68.el8_7.1.x86_64", "systemd-libs-239-68.el8_7.1.i686", "systemd-libs-239-68.el8_7.1.x86_64", "systemd-pam-239-68.el8_7.1.x86_64", "systemd-tests-239-68.el8_7.1.x86_64", "systemd-udev-239-68.el8_7.1.x86_64"]}, "RHBA-2023:0090": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": [], "packages": ["zlib-1.2.11-21.el8_7.i686", "zlib-1.2.11-21.el8_7.x86_64", "zlib-devel-1.2.11-21.el8_7.i686", "zlib-devel-1.2.11-21.el8_7.x86_64"]}, "RHEA-2023:0129": {"severity": "None", "errata_type": "enhancement", "CVEs": [], "bugs": [], "packages": ["kpatch-patch-4_18_0-425_10_1-0-0.el8_7.x86_64"]}, "RHBA-2023:0124": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2139871", "2142961", "2148989", "2152883"], "packages": ["libipa_hbac-2.7.3-4.el8_7.3.i686", "libipa_hbac-2.7.3-4.el8_7.3.x86_64", "libsss_autofs-2.7.3-4.el8_7.3.x86_64", "libsss_certmap-2.7.3-4.el8_7.3.i686", "libsss_certmap-2.7.3-4.el8_7.3.x86_64", "libsss_idmap-2.7.3-4.el8_7.3.i686", "libsss_idmap-2.7.3-4.el8_7.3.x86_64", "libsss_nss_idmap-2.7.3-4.el8_7.3.i686", "libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64", "libsss_simpleifp-2.7.3-4.el8_7.3.i686", "libsss_simpleifp-2.7.3-4.el8_7.3.x86_64", "libsss_sudo-2.7.3-4.el8_7.3.x86_64", "python3-libipa_hbac-2.7.3-4.el8_7.3.x86_64", "python3-libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64", "python3-sss-2.7.3-4.el8_7.3.x86_64", "python3-sssdconfig-2.7.3-4.el8_7.3.noarch", "python3-sss-murmur-2.7.3-4.el8_7.3.x86_64", "sssd-2.7.3-4.el8_7.3.x86_64", "sssd-ad-2.7.3-4.el8_7.3.x86_64", "sssd-client-2.7.3-4.el8_7.3.i686", "sssd-client-2.7.3-4.el8_7.3.x86_64", "sssd-common-2.7.3-4.el8_7.3.x86_64", "sssd-common-pac-2.7.3-4.el8_7.3.x86_64", "sssd-dbus-2.7.3-4.el8_7.3.x86_64", "sssd-idp-2.7.3-4.el8_7.3.x86_64", "sssd-ipa-2.7.3-4.el8_7.3.x86_64", "sssd-kcm-2.7.3-4.el8_7.3.x86_64", "sssd-krb5-2.7.3-4.el8_7.3.x86_64", "sssd-krb5-common-2.7.3-4.el8_7.3.x86_64", "sssd-ldap-2.7.3-4.el8_7.3.x86_64", "sssd-nfs-idmap-2.7.3-4.el8_7.3.x86_64", "sssd-polkit-rules-2.7.3-4.el8_7.3.x86_64", "sssd-proxy-2.7.3-4.el8_7.3.x86_64", "sssd-tools-2.7.3-4.el8_7.3.x86_64", "sssd-winbind-idmap-2.7.3-4.el8_7.3.x86_64"]}, "RHBA-2023:0105": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2143252"], "packages": ["libblkid-2.32.1-39.el8_7.i686", "libblkid-2.32.1-39.el8_7.x86_64", "libblkid-devel-2.32.1-39.el8_7.i686", "libblkid-devel-2.32.1-39.el8_7.x86_64", "libfdisk-2.32.1-39.el8_7.i686", "libfdisk-2.32.1-39.el8_7.x86_64", "libfdisk-devel-2.32.1-39.el8_7.i686", "libfdisk-devel-2.32.1-39.el8_7.x86_64", "libmount-2.32.1-39.el8_7.i686", "libmount-2.32.1-39.el8_7.x86_64", "libsmartcols-2.32.1-39.el8_7.i686", "libsmartcols-2.32.1-39.el8_7.x86_64", "libsmartcols-devel-2.32.1-39.el8_7.i686", "libsmartcols-devel-2.32.1-39.el8_7.x86_64", "libuuid-2.32.1-39.el8_7.i686", "libuuid-2.32.1-39.el8_7.x86_64", "libuuid-devel-2.32.1-39.el8_7.i686", "libuuid-devel-2.32.1-39.el8_7.x86_64", "python3-libmount-2.32.1-39.el8_7.x86_64", "util-linux-2.32.1-39.el8_7.x86_64", "util-linux-user-2.32.1-39.el8_7.x86_64", "uuidd-2.32.1-39.el8_7.x86_64"]}, "RHBA-2023:0085": {"severity": "None", "errata_type": "bugfix", "CVEs": [], "bugs": ["2134764"], "packages": ["net-snmp-5.8-25.el8_7.1.x86_64", "net-snmp-agent-libs-5.8-25.el8_7.1.i686", "net-snmp-agent-libs-5.8-25.el8_7.1.x86_64", "net-snmp-devel-5.8-25.el8_7.1.i686", "net-snmp-devel-5.8-25.el8_7.1.x86_64", "net-snmp-libs-5.8-25.el8_7.1.i686", "net-snmp-libs-5.8-25.el8_7.1.x86_64", "net-snmp-perl-5.8-25.el8_7.1.x86_64", "net-snmp-utils-5.8-25.el8_7.1.x86_64"]}}
+{
+    "RHSA-2023:0808": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2023-0767",
+            "CVE-2023-25728",
+            "CVE-2023-25729",
+            "CVE-2023-25730",
+            "CVE-2023-25732",
+            "CVE-2023-25735",
+            "CVE-2023-25737",
+            "CVE-2023-25739",
+            "CVE-2023-25742",
+            "CVE-2023-25743",
+            "CVE-2023-25744",
+            "CVE-2023-25746"
+        ],
+        "bugs": [
+            "2170374",
+            "2170375",
+            "2170376",
+            "2170377",
+            "2170378",
+            "2170379",
+            "2170381",
+            "2170382",
+            "2170383",
+            "2170390",
+            "2170391",
+            "2170402"
+        ],
+        "packages": [
+            "firefox-102.8.0-2.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0662": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2023-0494"
+        ],
+        "bugs": [
+            "2165995"
+        ],
+        "packages": [
+            "tigervnc-1.12.0-9.el8_7.1.x86_64",
+            "tigervnc-icons-1.12.0-9.el8_7.1.noarch",
+            "tigervnc-license-1.12.0-9.el8_7.1.noarch",
+            "tigervnc-selinux-1.12.0-9.el8_7.1.noarch",
+            "tigervnc-server-1.12.0-9.el8_7.1.x86_64",
+            "tigervnc-server-minimal-1.12.0-9.el8_7.1.x86_64",
+            "tigervnc-server-module-1.12.0-9.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0610": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-23521",
+            "CVE-2022-41903"
+        ],
+        "bugs": [
+            "2162055",
+            "2162056"
+        ],
+        "packages": [
+            "git-2.31.1-3.el8_7.x86_64",
+            "git-all-2.31.1-3.el8_7.noarch",
+            "git-core-2.31.1-3.el8_7.x86_64",
+            "git-core-doc-2.31.1-3.el8_7.noarch",
+            "git-credential-libsecret-2.31.1-3.el8_7.x86_64",
+            "git-daemon-2.31.1-3.el8_7.x86_64",
+            "git-email-2.31.1-3.el8_7.noarch",
+            "git-gui-2.31.1-3.el8_7.noarch",
+            "git-instaweb-2.31.1-3.el8_7.noarch",
+            "gitk-2.31.1-3.el8_7.noarch",
+            "git-subtree-2.31.1-3.el8_7.x86_64",
+            "git-svn-2.31.1-3.el8_7.noarch",
+            "gitweb-2.31.1-3.el8_7.noarch",
+            "perl-Git-2.31.1-3.el8_7.noarch",
+            "perl-Git-SVN-2.31.1-3.el8_7.noarch"
+        ]
+    },
+    "RHSA-2023:0379": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-44617",
+            "CVE-2022-46285",
+            "CVE-2022-4883"
+        ],
+        "bugs": [
+            "2160092",
+            "2160193",
+            "2160213"
+        ],
+        "packages": [
+            "libXpm-3.5.12-9.el8_7.i686",
+            "libXpm-3.5.12-9.el8_7.x86_64",
+            "libXpm-devel-3.5.12-9.el8_7.i686",
+            "libXpm-devel-3.5.12-9.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0284": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2023-22809"
+        ],
+        "bugs": [
+            "2161142"
+        ],
+        "packages": [
+            "sudo-1.8.29-8.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0173": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-40303",
+            "CVE-2022-40304"
+        ],
+        "bugs": [
+            "2136266",
+            "2136288"
+        ],
+        "packages": [
+            "libxml2-2.9.7-15.el8_7.1.i686",
+            "libxml2-2.9.7-15.el8_7.1.x86_64",
+            "libxml2-devel-2.9.7-15.el8_7.1.i686",
+            "libxml2-devel-2.9.7-15.el8_7.1.x86_64",
+            "python3-libxml2-2.9.7-15.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0095": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-2056",
+            "CVE-2022-2057",
+            "CVE-2022-2058",
+            "CVE-2022-2519",
+            "CVE-2022-2520",
+            "CVE-2022-2521",
+            "CVE-2022-2867",
+            "CVE-2022-2868",
+            "CVE-2022-2869",
+            "CVE-2022-2953"
+        ],
+        "bugs": [
+            "2103222",
+            "2118847",
+            "2118863",
+            "2118869",
+            "2122789",
+            "2122792",
+            "2122799",
+            "2134432"
+        ],
+        "packages": [
+            "libtiff-4.0.9-26.el8_7.i686",
+            "libtiff-4.0.9-26.el8_7.x86_64",
+            "libtiff-devel-4.0.9-26.el8_7.i686",
+            "libtiff-devel-4.0.9-26.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0099": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-4144"
+        ],
+        "bugs": [
+            "2132176",
+            "2148506"
+        ],
+        "packages": []
+    },
+    "RHSA-2023:0103": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-43680"
+        ],
+        "bugs": [
+            "2140059"
+        ],
+        "packages": [
+            "expat-2.2.5-10.el8_7.1.i686",
+            "expat-2.2.5-10.el8_7.1.x86_64",
+            "expat-devel-2.2.5-10.el8_7.1.i686",
+            "expat-devel-2.2.5-10.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0116": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2021-46848"
+        ],
+        "bugs": [
+            "2140058"
+        ],
+        "packages": [
+            "libtasn1-4.13-4.el8_7.i686",
+            "libtasn1-4.13-4.el8_7.x86_64",
+            "libtasn1-devel-4.13-4.el8_7.i686",
+            "libtasn1-devel-4.13-4.el8_7.x86_64",
+            "libtasn1-tools-4.13-4.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0100": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-3821"
+        ],
+        "bugs": [
+            "2127170",
+            "2139327"
+        ],
+        "packages": [
+            "systemd-239-68.el8_7.1.i686",
+            "systemd-239-68.el8_7.1.x86_64",
+            "systemd-container-239-68.el8_7.1.i686",
+            "systemd-container-239-68.el8_7.1.x86_64",
+            "systemd-devel-239-68.el8_7.1.i686",
+            "systemd-devel-239-68.el8_7.1.x86_64",
+            "systemd-journal-remote-239-68.el8_7.1.x86_64",
+            "systemd-libs-239-68.el8_7.1.i686",
+            "systemd-libs-239-68.el8_7.1.x86_64",
+            "systemd-pam-239-68.el8_7.1.x86_64",
+            "systemd-tests-239-68.el8_7.1.x86_64",
+            "systemd-udev-239-68.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0096": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-42010",
+            "CVE-2022-42011",
+            "CVE-2022-42012"
+        ],
+        "bugs": [
+            "2133616",
+            "2133617",
+            "2133618"
+        ],
+        "packages": [
+            "dbus-1.12.8-23.el8_7.1.x86_64",
+            "dbus-common-1.12.8-23.el8_7.1.noarch",
+            "dbus-daemon-1.12.8-23.el8_7.1.x86_64",
+            "dbus-devel-1.12.8-23.el8_7.1.i686",
+            "dbus-devel-1.12.8-23.el8_7.1.x86_64",
+            "dbus-libs-1.12.8-23.el8_7.1.i686",
+            "dbus-libs-1.12.8-23.el8_7.1.x86_64",
+            "dbus-tools-1.12.8-23.el8_7.1.x86_64",
+            "dbus-x11-1.12.8-23.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0110": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-35737"
+        ],
+        "bugs": [
+            "2110291"
+        ],
+        "packages": [
+            "lemon-3.26.0-17.el8_7.x86_64",
+            "sqlite-3.26.0-17.el8_7.i686",
+            "sqlite-3.26.0-17.el8_7.x86_64",
+            "sqlite-devel-3.26.0-17.el8_7.i686",
+            "sqlite-devel-3.26.0-17.el8_7.x86_64",
+            "sqlite-doc-3.26.0-17.el8_7.noarch",
+            "sqlite-libs-3.26.0-17.el8_7.i686",
+            "sqlite-libs-3.26.0-17.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0101": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-2964",
+            "CVE-2022-4139"
+        ],
+        "bugs": [
+            "2067482",
+            "2147572"
+        ],
+        "packages": [
+            "bpftool-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-abi-stablelists-4.18.0-425.10.1.el8_7.noarch",
+            "kernel-core-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-cross-headers-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-debug-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-debug-core-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-debug-devel-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-debug-modules-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-debug-modules-extra-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-devel-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-doc-4.18.0-425.10.1.el8_7.noarch",
+            "kernel-headers-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-modules-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-modules-extra-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-tools-4.18.0-425.10.1.el8_7.x86_64",
+            "kernel-tools-libs-4.18.0-425.10.1.el8_7.x86_64",
+            "perf-4.18.0-425.10.1.el8_7.x86_64",
+            "python3-perf-4.18.0-425.10.1.el8_7.x86_64"
+        ]
+    },
+    "RHSA-2023:0049": {
+        "severity": "Moderate",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-2601",
+            "CVE-2022-3775"
+        ],
+        "bugs": [
+            "2112975",
+            "2138880"
+        ],
+        "packages": [
+            "grub2-common-2.02-142.el8_7.1.noarch",
+            "grub2-efi-aa64-modules-2.02-142.el8_7.1.noarch",
+            "grub2-efi-ia32-2.02-142.el8_7.1.x86_64",
+            "grub2-efi-ia32-cdboot-2.02-142.el8_7.1.x86_64",
+            "grub2-efi-ia32-modules-2.02-142.el8_7.1.noarch",
+            "grub2-efi-x64-2.02-142.el8_7.1.x86_64",
+            "grub2-efi-x64-cdboot-2.02-142.el8_7.1.x86_64",
+            "grub2-efi-x64-modules-2.02-142.el8_7.1.noarch",
+            "grub2-pc-2.02-142.el8_7.1.x86_64",
+            "grub2-pc-modules-2.02-142.el8_7.1.noarch",
+            "grub2-ppc64le-modules-2.02-142.el8_7.1.noarch",
+            "grub2-tools-2.02-142.el8_7.1.x86_64",
+            "grub2-tools-efi-2.02-142.el8_7.1.x86_64",
+            "grub2-tools-extra-2.02-142.el8_7.1.x86_64",
+            "grub2-tools-minimal-2.02-142.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2023:0016": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2022-42856"
+        ],
+        "bugs": [
+            "2153683"
+        ],
+        "packages": [
+            "webkit2gtk3-2.36.7-1.el8_7.1.i686",
+            "webkit2gtk3-2.36.7-1.el8_7.1.x86_64",
+            "webkit2gtk3-devel-2.36.7-1.el8_7.1.i686",
+            "webkit2gtk3-devel-2.36.7-1.el8_7.1.x86_64",
+            "webkit2gtk3-jsc-2.36.7-1.el8_7.1.i686",
+            "webkit2gtk3-jsc-2.36.7-1.el8_7.1.x86_64",
+            "webkit2gtk3-jsc-devel-2.36.7-1.el8_7.1.i686",
+            "webkit2gtk3-jsc-devel-2.36.7-1.el8_7.1.x86_64"
+        ]
+    },
+    "RHSA-2020:1318": {
+        "severity": "Important",
+        "errata_type": "security",
+        "CVEs": [
+            "CVE-2020-10188"
+        ],
+        "bugs": [
+            "1811673"
+        ],
+        "packages": [
+            "telnet-0.17-73.el8_1.1.x86_64",
+            "telnet-server-0.17-73.el8_1.1.x86_64"
+        ]
+    }
+}

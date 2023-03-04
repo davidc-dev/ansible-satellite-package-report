@@ -14,21 +14,11 @@ satellite_pswd  |  password               |  Satellite Server password
 content_view    |  RHEL8                    |  Name of Content View to run against
 content_view_version|   6.0              |  Version of Content View to run against
 full_results    |  True/False            |  Set to True to get full resuts from content view query.  **Warning** Will increase run time dramatically.
+content_view_filter_name | security_only | Set name of Content view filter to use.  Leave blank ```content_view_filter_name: ""``` if no filter used.
 
-## **host_errata_pre_patch.yml**
+## **host_errata_report.yml**
 
-Generates a list of hosts (***host_info.csv***) in specified host collection and then outputs a csv (***pre-patch-host-errata.csv***) adding all applicable errata to that host and column for data/time script is run.  Run this before applying patchs/updates to get a baseline.  Example files in ***example_outputs*** directory.
-
-Variable Name   |  Example                       |  Description
-----------------|----------------------- | ----------------------------------------
-inventory_host  |  test.example.com      |  Host to execute scripts and output reports
-satellite_host  |  satellite.example.com  |  Hostname of Satellite Server
-satellite_user  |  admin                 |  Satellite Server usernamne
-satellite_pswd  |  password               |  Satellite Server password
-host_collection    |  RHEL8-Hosts         |  Name of host collection to query 
-
-## **host_errata_pre_patch.yml**
-Generates a list of hosts (***host_info.csv***) in specified host collection and then outputs a csv (***post-patch-host-errata.csv***) adding all applicable errata to that host and column for data/time script is run.  Run this after applying patchs/updates and then compare to ***pre-patch-host-errata.csv*** to verify applicate errata was installed.  Example files in ***example_outputs*** directory.
+Generates a list of hosts (***host_info.csv***) in specified host collection or lifecycle environment and then outputs a csv (***host_report_DATE_TIME.csv***) adding all applicable errata to that host and column for data/time script is run.  Run this before and after applying patchs/updates to be able to show all expected errata installed.  Example files in ***example_outputs*** directory.
 
 Variable Name   |  Example                       |  Description
 ----------------|----------------------- | ----------------------------------------
@@ -36,4 +26,5 @@ inventory_host  |  test.example.com      |  Host to execute scripts and output r
 satellite_host  |  satellite.example.com  |  Hostname of Satellite Server
 satellite_user  |  admin                 |  Satellite Server usernamne
 satellite_pswd  |  password               |  Satellite Server password
-host_collection    |  RHEL8-Hosts         |  Name of host collection to query 
+host_collection    |  RHEL8-Hosts         |  Name of host collection to query (if using, do not define lifecycle_environment)
+lifecycle_environment | Development       | Name of lifecycle environment (if using, do not define host_collection)
