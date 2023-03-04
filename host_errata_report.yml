@@ -18,11 +18,11 @@
       chdir: /tmp/outputs
     when: host_collection | length > 0
 
-  - name: Remove file (delete file) host_list_host_collection.py when host_collection_name varaible is length greater than 0.
-    ansible.builtin.file:
-      path: /tmp/outputs/host_list_host_collection.py when host_collection_name varaible is length greater than 0.
-      state: absent
-    when: host_collection | length > 0
+  # - name: Remove file (delete file) host_list_host_collection.py when host_collection_name varaible is length greater than 0.
+  #   ansible.builtin.file:
+  #     path: /tmp/outputs/host_list_host_collection.py when host_collection_name varaible is length greater than 0.
+  #     state: absent
+  #   when: host_collection | length > 0
 
   - name: Run host_list_lifecycle_environment.py when lifecycle_environment_name varaible is length greater than 0.
     ansible.builtin.command: "python3 /tmp/outputs/host_list_lifecycle_environment.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ lifecycle_environment }}" 
@@ -30,11 +30,11 @@
       chdir: /tmp/outputs
     when: lifecycle_environment | length > 0
 
-  - name: Remove file (delete file) host_list_lifecycle_environment.py when lifecycle_environment_name varaible is length greater than 0.
-    ansible.builtin.file:
-      path: /tmp/outputs/host_list_lifecycle_environment.py
-      state: absent
-    when: lifecycle_environment | length > 0
+  # - name: Remove file (delete file) host_list_lifecycle_environment.py when lifecycle_environment_name varaible is length greater than 0.
+  #   ansible.builtin.file:
+  #     path: /tmp/outputs/host_list_lifecycle_environment.py
+  #     state: absent
+  #   when: lifecycle_environment | length > 0
 
   - name: Run host_applicable_errata.py
     ansible.builtin.command: "python3 /tmp/outputs/host_applicable_errata.py {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} host_report_{{ ansible_date_time.iso8601 }}.csv"
@@ -43,5 +43,7 @@
 
   - name: Remove file (delete file)
     ansible.builtin.file:
-      path: /tmp/outputs/host_applicable_errata.py
+      src: "{{ item }}"
       state: absent
+    with_fileglob: 
+      - "/tmp/outputs/*.py
