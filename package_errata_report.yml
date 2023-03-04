@@ -12,11 +12,6 @@
     args:
       chdir: /tmp/outputs
 
-  - name: Remove file (delete file)
-    ansible.builtin.file:
-      path: /tmp/outputs/1_query_content_view.py 
-      state: absent
-
   - name: Run 2_packages_errata_id.py
     ansible.builtin.command: "python3 /tmp/outputs/2_packages_errata_id.py"
     args:
@@ -32,37 +27,29 @@
     args:
       chdir: /tmp/outputs
 
-  - name: Remove file (delete file)
-    ansible.builtin.file:
-      path: /tmp/outputs/3_packages_ids.py
-      state: absent
-
   - name: Run 4_packages_repos.py 
     ansible.builtin.command: "python3 /tmp/outputs/4_packages_repos.py  {{ satellite_host }} {{ satellite_user }} {{ satellite_pswd }} {{ content_view }} {{ content_view_version }}" 
     args:
       chdir: /tmp/outputs
-
-  - name: Remove file (delete file)
-    ansible.builtin.file:
-      path: /tmp/outputs/4_packages_repos.py 
-      state: absent
 
   - name: Run 5_packages_cve.py
     ansible.builtin.command: "python3 /tmp/outputs/5_packages_cve.py"
     args:
       chdir: /tmp/outputs
 
-  - name: Remove file (delete file)
-    ansible.builtin.file:
-      path: /tmp/outputs/5_packages_cve.py
-      state: absent
-
   - name: Run 6_merge_results.py
     ansible.builtin.command: "python3 /tmp/outputs/6_merge_results.py"
     args:
       chdir: /tmp/outputs
 
+  - name: Find py files for cleanup
+    ansible.builtin.find:
+      paths: /tmp/outputs
+      patterns: "*.py"
+    register: py_files
+
   - name: Remove file (delete file)
     ansible.builtin.file:
-      path: /tmp/outputs/6_merge_results.py
+      path: "{{ item['path'] }}"
       state: absent
+    with_items: "{{ py_files['files'] }}"
