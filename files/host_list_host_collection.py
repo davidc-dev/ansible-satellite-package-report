@@ -43,7 +43,7 @@ hosts = json.loads(hosts_response.content)
 
 
 # Open a CSV file for writing
-with open('host_info.csv', 'w', newline='') as f:
+with open('host_list.csv', 'w', newline='') as f:
     writer = csv.writer(f)
 
     # Write the header row
