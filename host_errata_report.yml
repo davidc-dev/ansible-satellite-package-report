@@ -29,8 +29,14 @@
     args:
       chdir: /tmp/outputs
 
+  - name: Find py files
+    ansible.builtin.find:
+      paths: /tmp/outputs
+      patterns: "*.py"
+    register: py_files
+
   - name: Remove file (delete file)
     ansible.builtin.file:
-      src: "{{ item }}"
+      path: "{{ item['path'] }}"
       state: absent
-    with_fileglob: /tmp/outputs/*.py
+    with_items: "{{ py_files['files'] }}"
