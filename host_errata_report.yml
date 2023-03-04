@@ -1,8 +1,8 @@
 - name: Compare host packages with content view
   hosts: "{{ inventory_host }}"
   vars:
-    host_collection: "{{ host_collection_name }}"
-    lifecycle_environment: "{{ lifecycle_environment_name }}"
+    host_collection: ""
+    lifecycle_environment: ""
 
   tasks:
   - name: Copy python scripts to remote machine
