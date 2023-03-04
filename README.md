@@ -18,7 +18,7 @@ content_view_filter_name | security_only | Set name of Content view filter to us
 
 ## **host_errata_report.yml**
 
-Generates a list of hosts (***host_info.csv***) in specified host collection or lifecycle environmenbt and then outputs a csv (***host_report_DATE_TIME.csv***) adding all applicable errata to that host and column for data/time script is run.  Run this before and after applying patchs/updates to be able to show all expected errata installed.  Example files in ***example_outputs*** directory.
+Generates a list of hosts (***host_info.csv***) in specified host collection or lifecycle environment and then outputs a csv (***host_report_DATE_TIME.csv***) adding all applicable errata to that host and column for data/time script is run.  Run this before and after applying patchs/updates to be able to show all expected errata installed.  Example files in ***example_outputs*** directory.
 
 Variable Name   |  Example                       |  Description
 ----------------|----------------------- | ----------------------------------------
